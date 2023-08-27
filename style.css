@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header
+{
+ position: absolute;
+  left: 0;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:40px;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  background-color: #35beb3;
+}
+ button{
+  background-color: #659fcf;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:10px;
+  font-size:20px;
+  margin: 0px 50px;
+
+}
+header .logo
+{
+  cursor: pointer;
+  margin-left:50px;
+  /* left:5px; */
+}
+
+.navbar-list{
+  display:flex;
+  gap: 50px;
+  list-style:none;
+}
+.navbar-link:link,
+.navbar-link:visited{
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration:none;
+  font-size: 23px;
+  font-weight:500;
+  color:#fff;
+  margin-top:10px;
+
+  /* background-color: #023328; */
+
+  transition: all 0.3s;
+}
+
+.nav-btn{
+  display:none;
+  background: transparent;
+ cursor:pointer;
+}
+ .nav-btn .nav-icon{
+      width:40px;
+     height:40px; 
+     color:#faf7f7;
+}
+
+.nav-icon[name='close']{
+display:none;
+}
+
+@media (max-width: 780px)
+{
+  .nav-btn{
+    display:block;
+    z-index:999;
+    color:black;
+  }
+  nav{
+    display:none;
+
+  }
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+}
+
+header img{
+  top:0;
+  height:40px;
+  width: 40px;
+ 
+}
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+} 
+
+.showcase.active
+{
+  right: 300px;
+}
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2e6e8b;
+  mix-blend-mode: overlay;
+}
+
+.text
+{
+  position: absolute;
+  left:48%;
+  z-index: 10;
+  top: 50%;
+  transform:translate(-50%,-50%);
+  text-align: center;
+}
+
+.text h4
+{
+  font-size: 2em;
+  font-weight: 700;
+  color: #25a096;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 2em;
+  font-weight: 700;
+  color: #baf0e4;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #959a9c;
+  margin: 20px 0;
+  font-weight: 400;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #6fa9d8;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left:40%;
+  gap:40px;
+}
+.social li
+{
+  list-style: none;
+}
+.social li a
+{
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  transform: scale(0.5) translateY(-15px);
+}
+
